@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import quotes from './quotes.json'
 import './App.css'
 import QuoteBox from './components/QuoteBox'
