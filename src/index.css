@@ -54,7 +54,4 @@ button {
   transition: border-color 0.25s;
   background-color: transparent;
 }
-button:hover {
-  border-color: #9a9bb3;
-}
 

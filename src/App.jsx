@@ -22,9 +22,9 @@ function App() {
     setRamdom(randomQuotes)
   }
   return (
-    <div className="App">
-      <QuoteBox random={random} colors={ `background : ${colors[changesColor]}`}/>
-      <Button random={random} Cambio={Cambio} colors={colors}/>
+    <div className="App" style={{color: colors[changesColor]}}>
+      <QuoteBox random={random}/> 
+      <Button style={{color: colors[changesColor]}} random={random} Cambio={Cambio}/>
     </div>
   )
 }
