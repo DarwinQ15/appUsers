@@ -6,24 +6,25 @@ import QuoteBox from './components/QuoteBox'
 import Button from './components/Button.jsx'
 
 function App() {
-  let randomQuotes = Math.floor(Math.random() * quotes.length)
+  let randomQuotes =quotes[Math.floor(Math.random() * quotes.length)]
 
   const [random, setRamdom] = useState(randomQuotes)
 
-  const colors = ['#845EC2', '#D65DB1', '#FF6F91', '#FF9671', '#FFC75F', '#F9F871']
+  const colors = ['#845EC2', '#D65DB1', '#FF6F91', '#FF9671', '#FFC75F', '#F9F871', '#008F7A', '#C34A36', '#D8E4EA', '#4FFBDF']
 
   const changesColor = Math.floor(Math.random() * colors.length)
 
   document.body.style = `background : ${colors[changesColor]}`
 
 
-   const Cambio = () =>{
-    randomQuotes = Math.floor(Math.random() * quotes.length)
+   let Cambio = () =>{
+    randomQuotes = quotes[Math.floor(Math.random() * quotes.length)]
     setRamdom(randomQuotes)
   }
   return (
     <div className="App">
-      <QuoteBox random={random} Cambio={Cambio}/>
+      <QuoteBox random={random} colors={ `background : ${colors[changesColor]}`}/>
+      <Button random={random} Cambio={Cambio} colors={colors}/>
     </div>
   )
 }

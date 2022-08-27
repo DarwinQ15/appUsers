@@ -1,17 +1,11 @@
 import React from 'react';
-import quotes from '../quotes.json'
-const QuoteBox = ({random, quotes}) => {
+const QuoteBox = ({random, colors}) => {
     return (
-        <div>
-            <div>
-                <b>“</b>
+        <div className='description' style= {{color: 'colors'}}>
+            <div className='description-user colors'>
+                <h1><i class="fa fa-quote-left" aria-hidden="true"></i>{random.quote}</h1> 
+                <h3>{random.author}</h3>
             </div>
-            <div>
-                <h1>{quotes[0].quote}</h1> 
-            </div>
-            <div>
-                <h3>{quotes[0].quote}</h3>
-            </div> 
         </div>
     );
 };
