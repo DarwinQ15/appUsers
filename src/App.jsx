@@ -17,14 +17,14 @@ function App() {
   document.body.style = `background : ${colors[changesColor]}`
 
 
-   let Cambio = () =>{
+   let ChangeRandom = () =>{
     randomQuotes = quotes[Math.floor(Math.random() * quotes.length)]
     setRamdom(randomQuotes)
   }
   return (
     <div className="App" style={{color: colors[changesColor]}}>
       <QuoteBox random={random}/> 
-      <Button style={{color: colors[changesColor]}} random={random} Cambio={Cambio}/>
+      <Button style={{color: colors[changesColor]}} random={random} ChangeRandom={ChangeRandom}/>
     </div>
   )
 }
